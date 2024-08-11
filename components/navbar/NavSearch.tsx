@@ -20,7 +20,7 @@ const params = new URLSearchParams(searchParams);
   else{
   params.delete('search');
   }
-  replace(`/?${params.toString()}`);
+  replace(`/ ?${params.toString()}`);
   },500);
 
   useEffect(() => {
