@@ -5,7 +5,8 @@ import { SubmitButton } from '@/components/form/Buttons'
 import ImageInput from '@/components/form/ImageInput';
 import ImageInputContainer from '@/components/form/ImageInputContainer';
 
-const ProfilePage = async () => {
+
+  async function ProfilePage(){
   const profile = await fetchProfile();
   return (
     <section>
@@ -35,7 +36,7 @@ const ProfilePage = async () => {
         </FormContainer>
     </div>
    </section>
-  )
-}
+  );
+};
 
 export default ProfilePage;

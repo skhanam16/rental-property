@@ -1,9 +1,9 @@
 'use client';
 
-import { useToast } from "../ui/use-toast";
+import { useToast } from "@/components/ui/use-toast";
 import { SignOutButton } from "@clerk/nextjs";
 
-const SignOutLink = () => {
+function SignOutLink() {
   const {toast} = useToast();
   const handleLogout = () => {
     toast({description: 'You has successfully signout'});
@@ -12,7 +12,7 @@ const SignOutLink = () => {
     <SignOutButton redirectUrl='/'>
       <button className="w-full text-left" onClick={handleLogout}>Logout</button>
       </SignOutButton>
-  )
-}
+  );
+};
 
 export default SignOutLink;

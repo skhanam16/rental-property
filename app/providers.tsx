@@ -2,7 +2,7 @@
 import {ThemeProvider} from './theme-provider';
 import { Toaster } from '@/components/ui/toaster';
 
-const Providers = ({children}:{children:React.ReactNode}) => {
+function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
     <Toaster />
@@ -14,9 +14,8 @@ const Providers = ({children}:{children:React.ReactNode}) => {
     >
          {children}
     </ThemeProvider>
-       
     </>
-  )
-}
+  );
+};
 
 export default Providers;

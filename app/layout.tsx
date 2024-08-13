@@ -29,4 +29,4 @@ export default function RootLayout({ children }) {
     </html>
     </ClerkProvider>
   );
-}
+};

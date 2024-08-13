@@ -6,9 +6,7 @@ import {createProfileAction} from '@/utils/actions';
 import { currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 
-
-
-const CreateProfilePage = async() => {
+async function CreateProfilePage() {
     const user = await currentUser();
     if(user?.privateMetadata?.hasProfile) redirect('/');
   return (

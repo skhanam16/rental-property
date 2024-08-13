@@ -5,7 +5,7 @@ import { useDebouncedCallback } from 'use-debounce';
 import { useState, useEffect } from 'react';
 
 
-const NavSearch = () => {
+function NavSearch() {
   const searchParams = useSearchParams();
     // console.log(pathName);
   const {replace} = useRouter();
@@ -39,7 +39,7 @@ const params = new URLSearchParams(searchParams);
      handleSearch(e.target.value);
    }}
     />
-  )
-}
+  );
+};
 
 export default NavSearch;

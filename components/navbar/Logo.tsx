@@ -2,7 +2,7 @@ import Link from 'next/link';
 import {LuTent} from 'react-icons/lu';
 import { Button } from '../ui/button';
 
-const Logo = () => {
+function Logo() {
   return (
     <div>
     <Button size='icon' asChild>
@@ -11,7 +11,7 @@ const Logo = () => {
      </Link>
       </Button>
     </div>
-  )
-}
+  );
+};
 
 export default Logo;
