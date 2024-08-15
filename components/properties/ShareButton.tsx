@@ -16,7 +16,13 @@ import {
   LinkedinIcon,
 } from 'react-share';
 
-const ShareButton = ({propertyId, name}:{propertyId:string, name:string}) => {
+function ShareButton({
+  propertyId,
+  name,
+}: {
+  propertyId: string;
+  name: string;
+}) {
     const url = process.env.NEXT_PUBLIC_WEBSITE_URL;
     const shareLink = `${url}/properties/${propertyId}`;
   return (

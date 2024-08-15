@@ -11,7 +11,7 @@ import countries from "world-countries";
 
 const name = 'country';
 
-const CountriesInput = ({defaultValue}: {defaultValue?: string}) => {
+function CountriesInput({ defaultValue }: { defaultValue?: string }) {
   return (
     <div className="mb-2">
         <Label htmlFor={name} className="capitalize">Country</Label>

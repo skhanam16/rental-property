@@ -21,7 +21,7 @@ const DynamicMap = dynamic(() => import('@/components/properties/PropertyMap'),
 }
 );
 
-const PropertyDetailsPage = async ({params}: {params: {id:string } }) => {
+async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     const property = await fetchPropertyDetails(params.id);
     if(!property) redirect('/');
     const {baths,bedrooms,beds, guests} = property;

@@ -3,13 +3,13 @@ import { ScrollArea, ScrollBar } from '../ui/scroll-area';
 import Link from 'next/link';
 
 
-const CategoriesList = ({
-    category, 
+function CategoriesList({
+    category,
     search,
-}: {
-    category?:string; 
-    search?:string;
-}) => {
+  }: {
+    category?: string;
+    search?: string;
+  }) {
     const searchTerm = search ? `&seach=${search}` : '';
   return (
    <section>

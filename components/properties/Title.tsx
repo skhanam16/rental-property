@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Title = ({text}:{text:string}) => {
+function Title({text}:{text:string}){
   return (
    <h3 className="text-lg font-bold mb-2">
     {text}
@@ -8,4 +8,4 @@ const Title = ({text}:{text:string}) => {
   )
 }
 
-export default Title
+export default Title;

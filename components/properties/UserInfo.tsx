@@ -9,7 +9,7 @@ type UserInfoProps = {
 
 
 
-const UserInfo = ({profile:{profileImage,firstName}}:UserInfoProps) => {
+function UserInfo({ profile: { profileImage, firstName } }: UserInfoProps) {
   return (
     <article className='grid grid-cols-[auto,1fr] gap-4 mt-4'>
       <Image

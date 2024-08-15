@@ -2,7 +2,7 @@ import { Amenity } from '@/utils/amenities';
 import { LuFolderCheck } from 'react-icons/lu';
 import Title from './Title';
 
-const Amenities = ({amenities}:{amenities:string}) => {
+function Amenities({ amenities }: { amenities: string }) {
     const amenitiesList:Amenity[] = JSON.parse(amenities as string);
     const noAmenities = amenitiesList.every((amenity) => !amenity.selected
     );

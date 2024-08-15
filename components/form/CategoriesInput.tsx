@@ -11,7 +11,7 @@ import {
 
     const name = 'category';
 
-    const CategoriesInput = ({defaultValue}:{defaultValue?:string}) => {
+    function CategoriesInput({ defaultValue }: { defaultValue?: string }) {
         return (
     <div className='mb-2'>
     <Label htmlFor={name} className="capitalize">Categories</Label>

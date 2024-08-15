@@ -1,5 +1,5 @@
 
-const CheckoutPage = () => {
+function CheckoutPage(){
   return (
     <div>
       CheckoutPage

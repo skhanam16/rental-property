@@ -1,5 +1,5 @@
 
-const RentalsPage = () => {
+function RentalsPage(){
   return (
     <div>
       RentalsPage

@@ -2,7 +2,7 @@
 import { Label } from '../ui/label';
 import { Input } from '../ui/input';
 
-const ImageInput = () => {
+function ImageInput() {
     const name = 'image';
   return (
     <div className='mb-2'>

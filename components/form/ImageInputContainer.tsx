@@ -16,7 +16,7 @@ type ImageInputContainerProps = {
     children?: React.ReactNode;
 }
 
-const ImageInputContainer = (props: ImageInputContainerProps) => {
+function ImageInputContainer(props: ImageInputContainerProps) {
     const {image, name, action, text} = props;
     const [isUpdateFormVisible, setUpdateFormVisible] = useState(false);
     const userIcon = (

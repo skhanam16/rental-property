@@ -6,7 +6,7 @@ type PriceInputProps = {
   
 }
 
-const PriceInput = ({defaultValue}:PriceInputProps) => {
+function PriceInput({defaultValue}:PriceInputProps){
     // const {defaultValue} = props;
     const name = 'price';
   return (

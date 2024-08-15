@@ -5,7 +5,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 
 
-const AmenitiesInput = ({defaultValue}:{defaultValue?:Amenity[]}) => {
+function AmenitiesInput({ defaultValue }: { defaultValue?: Amenity[] }) {
     const [selectedAmenities, setSelectedAmenities] = useState<Amenity[]>(defaultValue || amenities);
 
     const handleChange = (amenity:Amenity) => {
@@ -39,4 +39,4 @@ const AmenitiesInput = ({defaultValue}:{defaultValue?:Amenity[]}) => {
   )
 }
 
-export default AmenitiesInput
+export default AmenitiesInput;

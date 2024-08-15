@@ -9,7 +9,9 @@ type PropertyDetailsProps = {
     };
   };
 
-  const PropertyDetails = ({details:{bedrooms,baths,guests,beds}}:PropertyDetailsProps) => {
+  function PropertyDetails({
+    details: { bedrooms, baths, guests, beds },
+  }: PropertyDetailsProps) {
     return (
      <p className="text-md font-light">
         <span>{formatQuantity(bedrooms, 'bedroom')} &middot;</span>
