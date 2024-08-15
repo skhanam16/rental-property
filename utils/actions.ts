@@ -86,7 +86,7 @@ export const fetchProfile = async () => {
 };
 
 
-export const updataProfileAction =  async (
+export const updateProfileAction =  async (
   prevState:any, 
   formData:FormData
 ):Promise<{message:string}> => {
