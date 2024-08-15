@@ -10,6 +10,8 @@ async function CreateProfilePage() {
     const user = await currentUser();
     if(user?.privateMetadata?.hasProfile) redirect('/');
   return (
+    <html>
+        <main>
    <section>
     <h1 className="text-2xl font-semibold mb-8 capitalize">new user</h1>
     <div className="border p-8 rounded-md">
@@ -23,6 +25,8 @@ async function CreateProfilePage() {
         </FormContainer>
     </div>
    </section>
+   </main>
+   </html>
   );
 };
 
