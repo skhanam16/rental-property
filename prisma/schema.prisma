@@ -9,17 +9,19 @@ generator client {
 }
 
 model Profile {
-id              String     @id @default(uuid())
-clerkId         String     @unique
-firstName       String
-lastName        String
-username        String
-email           String
-profileImage    String
-createdAt       DateTime    @default(now())
-updatedAt       DateTime    @updatedAt
-properties      Property[]
-favorites    Favorite[]
+  id           String     @id @default(uuid())
+  clerkId      String     @unique
+  firstName    String
+  lastName     String
+  username     String
+  email        String
+  profileImage String
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  properties Property[]
+  favorites Favorite[]
+  reviews Review[]
+
 }
 
 
@@ -41,7 +43,10 @@ model Property {
   updatedAt   DateTime   @updatedAt
   profile     Profile    @relation(fields: [profileId], references: [clerkId], onDelete: Cascade)
   profileId   String
-  favorites    Favorite[]
+  favorites Favorite[]
+  reviews Review[]
+
+
 }
 
 
@@ -52,8 +57,20 @@ model Favorite {
 
   profile   Profile  @relation(fields: [profileId], references: [clerkId], onDelete: Cascade)
   profileId String
-
+  
   property   Property  @relation(fields: [propertyId], references: [id], onDelete: Cascade)
   propertyId String
 
+}
+
+model Review {
+  id        String   @id @default(uuid())
+  profile   Profile  @relation(fields: [profileId], references: [clerkId], onDelete: Cascade)
+  profileId String
+  property   Property  @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+  propertyId String
+  rating    Int
+  comment   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
