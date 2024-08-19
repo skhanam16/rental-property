@@ -13,6 +13,7 @@ import Description from '@/components/properties/Description';
 import Amenities from '@/components/properties/Amenities';
 import dynamic from 'next/dynamic';
 import { Skeleton } from '@/components/ui/skeleton';
+import SubmitReview from '@/components/reviews/SubmitReview';
 
 const DynamicMap = dynamic(() => import('@/components/properties/PropertyMap'),
 {
@@ -29,6 +30,7 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
     const firstName = property.profile.firstName;
     const profileImage = property.profile.profileImage;
   return (
+
    <section>
         <BreadCrumbs name={property.name} />
         <header className='flex justify-between items-center mt-4'>
@@ -61,7 +63,9 @@ async function PropertyDetailsPage({ params }: { params: { id: string } }) {
             <BookingCalendar />
            </div>
           </section>
+          <SubmitReview propertyId={property.id} />
     </section>
+    
   )
 }
 
