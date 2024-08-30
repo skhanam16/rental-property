@@ -278,7 +278,12 @@ return db.property.findUnique({
   },
   include: {
     profile: true,
-
+    bookings: {
+      select: {
+        checkIn: true,
+        checkOut: true,
+      },
+    },
   },
 });
 };
