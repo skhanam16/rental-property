@@ -9,9 +9,7 @@ function LoadingTable({rows}:{rows?:number}) {
   );
     });
 
-    return<>
-    {tableRows}
-    </>
+    return<>{tableRows}</>
 
 }
 export default LoadingTable;

@@ -1,10 +1,6 @@
-
-function RentalsPage(){
+function RentalPage() {
   return (
-    <div>
-      RentalsPage
-    </div>
+    <div>RentalPage</div>
   )
 }
-
-export default RentalsPage;
+export default RentalPage;
